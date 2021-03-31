@@ -4,6 +4,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
 import { useFonts } from "expo-font";
 import { Home } from "./screens/";
+import ModalTest from "./screens/ModalTest";
 
 const theme = {
   ...DefaultTheme,
@@ -26,18 +27,19 @@ const App = () => {
     return null;
   }
 
-  return (
-    <NavigationContainer theme={theme}>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        initialRouteName={"Home"}
-      >
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <ModalTest />;
+  // return (
+  //   <NavigationContainer theme={theme}>
+  //     <Stack.Navigator
+  //       screenOptions={{
+  //         headerShown: false,
+  //       }}
+  //       initialRouteName={"Home"}
+  //     >
+  //       <Stack.Screen name="Home" component={Home} />
+  //     </Stack.Navigator>
+  //   </NavigationContainer>
+  // );
 };
 
 export default App;
